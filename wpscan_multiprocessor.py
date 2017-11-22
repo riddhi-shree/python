@@ -17,7 +17,7 @@ class WorkerThread(threading.Thread):
             self.queue.task_done()
         
 def main():
-    cmdlist = open("D:\\2017\\Work\\ProwarenessScans\\ToVikram\\Nov2017\\wp-scan\\script\\wpscan_enumerate.bat")
+    cmdlist = open("D:\\wpscan_enumerate.bat")
     q = queue.Queue(maxsize = 14)
     for cmd in cmdlist:
         q.put(cmd)
