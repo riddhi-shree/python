@@ -26,7 +26,7 @@ class ExtractVulnInfo:
 		outfile.write("\n")
 
 	def getSeverity(self, title):
-		vulnlist = open("D:\\2017\\Work\\ProwarenessScans\\ToVikram\\Nov2017\\wp-scan\\script\\vulnSeverityList.txt")
+		vulnlist = open("D:\\Path\\To\\vulnSeverityList.txt")
 		for vuln in vulnlist:
 			if vuln.find(title) >0:
 				return vuln.strip()
@@ -70,5 +70,5 @@ class ExtractVulnInfo:
 			self.index += 1
 		
 	
-myObject = ExtractVulnInfo("D:\\2017\\Work\\ProwarenessScans\\ToVikram\\Nov2017\\wp-scan\\raw\\Final\\agileacademyNl.txt")
+myObject = ExtractVulnInfo("D:\\Path\\To\\wpscanOutputFile.txt")
 myObject.getData()
